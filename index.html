@@ -36,10 +36,10 @@
       <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-4" style="background:linear-gradient(135deg,#6366f1,#a855f7);">
        <i data-lucide="brain" style="width:40px;height:40px;color:#fff;"></i>
       </div>
-      <h1 id="title-text" class="text-3xl md:text-4xl font-800 text-white mb-4">Revisão para Avaliação Mensal de Informática</h1>
+      <h1 id="title-text" class="text-3xl md:text-4xl font-800 text-white mb-4">Avaliação bimestral de Informática</h1>
       <h1 class="text-3xl md:text-3xl font-800 text-white mb-2">Curso Técnico em Informática</h1>
       <h1 class="text-3xl md:text-2xl font-800 text-white mb-2">Prof. Nicolau Adad</h1>
-      <h1 class="text-3xl md:text-2xl font-800 text-white mb-4">Data: 07/10/2026</h1>
+      <h1 class="text-3xl md:text-2xl font-800 text-white mb-4">Data: 08/10/2026</h1>
       <p id="welcome-text" class="text-slate-400 text-lg">Você tem 2 tentativas para obter a melhor nota.</p>
      </div>
      <div class="bg-slate-800/60 rounded-2xl p-6 backdrop-blur border border-slate-700/50 mb-4">
@@ -47,7 +47,7 @@
       <p id="name-error" class="text-red-400 text-sm mt-2 hidden">Por favor, digite seu nome para começar.</p>
      </div>
      <div class="flex gap-3 text-sm text-slate-500 justify-center mb-6">
-      <span class="flex items-center gap-1"><i data-lucide="help-circle" style="width:14px;height:14px;"></i> 20 perguntas</span> <span class="flex items-center gap-1"><i data-lucide="rotate-ccw" style="width:14px;height:14px;"></i> 2 tentativas</span> <span class="flex items-center gap-1"><i data-lucide="award" style="width:14px;height:14px;"></i> Nota final</span>
+      <span class="flex items-center gap-1"><i data-lucide="help-circle" style="width:14px;height:14px;"></i> 10 perguntas</span> <span class="flex items-center gap-1"><i data-lucide="rotate-ccw" style="width:14px;height:14px;"></i> 2 tentativas</span> <span class="flex items-center gap-1"><i data-lucide="award" style="width:14px;height:14px;"></i> Nota final</span>
      </div><button onclick="startQuiz()" class="px-8 py-4 rounded-xl font-600 text-white text-lg option-btn" style="background:linear-gradient(135deg,#6366f1,#a855f7);width:100%;max-width:300px;"> Começar<i data-lucide="arrow-right" style="width:20px;height:20px;display:inline;vertical-align:middle;margin-left:4px;"></i> </button>
     </div>
    </div><!-- QUIZ SCREEN -->
@@ -55,7 +55,7 @@
     <div class="max-w-2xl w-full mx-auto flex-1 flex flex-col">
      <!-- Header -->
      <div class="flex items-center justify-between mb-4 pt-2">
-      <span id="attempt-badge" class="text-xs font-600 px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300">1ª Tentativa</span> <span id="q-counter" class="text-sm text-slate-400 font-500">1 / 20</span>
+      <span id="attempt-badge" class="text-xs font-600 px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300">1ª Tentativa</span> <span id="q-counter" class="text-sm text-slate-400 font-500">1 / 10</span>
      </div><!-- Progress -->
      <div class="w-full h-2 bg-slate-800 rounded-full mb-6 overflow-hidden">
       <div id="progress-bar" class="h-full rounded-full progress-fill" style="width:0%;background:linear-gradient(90deg,#6366f1,#a855f7);"></div>
@@ -385,9 +385,9 @@ function showResult() {
   document.getElementById('result-score').textContent = nota;
 
   const details = document.getElementById('result-details');
-  let detailsHTML = `<div class="text-center"><p class="text-2xl font-700 text-indigo-400">${scores[0]}/20</p><p class="text-slate-500">1ª Tentativa</p></div>`;
+  let detailsHTML = `<div class="text-center"><p class="text-2xl font-700 text-indigo-400">${scores[0]}/10</p><p class="text-slate-500">1ª Tentativa</p></div>`;
   if (attempt === 2) {
-    detailsHTML += `<div class="text-center"><p class="text-2xl font-700 text-purple-400">${scores[1]}/20</p><p class="text-slate-500">2ª Tentativa</p></div>`;
+    detailsHTML += `<div class="text-center"><p class="text-2xl font-700 text-purple-400">${scores[1]}/10</p><p class="text-slate-500">2ª Tentativa</p></div>`;
   }
   details.innerHTML = detailsHTML;
 
